@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA ASWIN | Product Manager | Build • Sell • Scale</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        apple: {
+                            blue: '#0066cc',
+                            gray: '#f5f5f7',
+                            dark: '#1d1d1f'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root { --bg: #ffffff; --text: #1d1d1f; --accent: #0066cc; }
+        .dark { --bg: #000000; --text: #f5f5f7; --accent: #0a84ff; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            transition: color 0.1s linear;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* --- High-End Circular Reveal --- */
+        #ripple-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .ripple-circle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--bg);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 9999;
+        }
+
+        .ripple-animate {
+            animation: ripple-expand 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes ripple-expand {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(3000); opacity: 1; }
+        }
+
+        /* --- Scroll Reveal --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- UI Components --- */
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+        }
+        .dark .glass { background: rgba(0, 0, 0, 0.75); }
+
+        .experience-card {
+            border-left: 2px solid #e5e7eb;
+            padding-left: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .dark .experience-card { border-left-color: #27272a; }
+        .experience-card:hover { border-left-color: var(--accent); }
+
+        .tag {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tag:hover {
+            transform: scale(1.05) translateY(-2px);
+            background-color: var(--accent);
+            color: white !important;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin: auto;
+        }
+
+        /* Prevent Layout Shifts on Mobile */
+        h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 1.1; letter-spacing: -0.04em; }
+        
+        .contact-link {
+            transition: opacity 0.2s ease;
+        }
+        .contact-link:hover { opacity: 0.7; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Theme Ripple Container -->
+    <div id="ripple-container"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] glass border-b border-gray-200 dark:border-zinc-800 transition-all py-3">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tight cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                VA ASWIN<span class="text-blue-600">.</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10 text-[11px] uppercase tracking-[0.25em] font-bold opacity-60">
+                <a href="#experience" class="hover:text-blue-600 transition-colors">Trajectory</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Expertise</a>
+                <a href="#achievements" class="hover:text-blue-600 transition-colors">Impact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="theme-btn" class="p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors">
+                    <span class="dark:hidden">🌙</span><span class="hidden dark:block">☀️</span>
+                </button>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="px-6 py-2.5 rounded-full bg-apple-dark text-white dark:bg-white dark:text-black text-[13px] font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/10">
+                    Hire Me
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
+        <div class="reveal active">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 mb-8">
+                <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-700 dark:text-blue-400">Executive Product Manager</span>
+            </div>
+            <h1 class="font-extrabold mb-10">
+                Built to Build.<br>
+                Sold to <span class="text-blue-600">Win.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-medium leading-relaxed mb-12">
+                Seven years of mastery across IIoT, B2B SaaS, and Hardware. I transform technical debt into market equity and roadlogs into revenue.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-8 md:gap-20 pt-16 border-t border-gray-100 dark:border-zinc-900">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold tracking-tighter">₹3 Cr+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-3">SaaS Revenue</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold tracking-tighter">Top 100</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-3">Store Ranking</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold tracking-tighter">PSPO II</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-3">Advanced Certified</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Career Trajectory (All 5 Experience Levels) -->
+    <section id="experience" class="py-32 px-6 bg-apple-gray dark:bg-[#080808]">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal mb-24">
+                <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Trajectory</h2>
+                <div class="h-1.5 w-20 bg-blue-600 rounded-full"></div>
+            </div>
+
+            <div class="space-y-32">
+                <!-- 1. Petrus Technologies -->
+                <div class="grid md:grid-cols-12 gap-12 reveal">
+                    <div class="md:col-span-4 sticky top-32 h-fit">
+                        <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">2024 — 2026</span>
+                        <h3 class="text-3xl font-bold mt-3">Petrus Technologies</h3>
+                        <p class="text-gray-500 font-semibold mt-1">Product Manager (Acting)</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div class="experience-card">
+                            <h4 class="text-xl font-bold mb-4 italic">IIoT & Digital Transformation</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Promoted within 30 days to own the Digital Inspection Product roadmap for major enterprise factory floors.</p>
+                            <ul class="space-y-4 text-sm md:text-base opacity-80">
+                                <li class="flex gap-4"><span>•</span> <span>Owned roadmap for Forms, Workflows, Dashboards; Authored PRDs/User Stories with engineering sign-off.</span></li>
+                                <li class="flex gap-4"><span>•</span> <span>Conducted 10+ factory floor interviews with Plant Heads & VPs to translate raw feedback into prioritized epics.</span></li>
+                                <li class="flex gap-4"><span>•</span> <span><strong>AI Impact:</strong> Developed an LLM Proposal Bot reducing generation time from 5 days to 1 day.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Sporfy PM L2 -->
+                <div class="grid md:grid-cols-12 gap-12 reveal">
+                    <div class="md:col-span-4 sticky top-32 h-fit">
+                        <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">2023 — 2024</span>
+                        <h3 class="text-3xl font-bold mt-3">Sporfy Technologies</h3>
+                        <p class="text-gray-500 font-semibold mt-1">Product Manager - L2</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div class="experience-card">
+                            <h4 class="text-xl font-bold mb-4 italic">Sports-Tech & Multi-Vertical Scaling</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Defined unified B2B2C strategy for UK & UAE markets, scaling platform to TN #2 (5M+ users).</p>
+                            <ul class="space-y-4 text-sm md:text-base opacity-80">
+                                <li class="flex gap-4"><span>•</span> <span>Scaled consumer apps to Top 100 on Google Play (#95) and App Store (#85).</span></li>
+                                <li class="flex gap-4"><span>•</span> <span>Led a team of 4 PMs owning 3 core product lines; Orchestrated RICE-based sprint planning.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Sporfy BD Manager -->
+                <div class="grid md:grid-cols-12 gap-12 reveal">
+                    <div class="md:col-span-4 sticky top-32 h-fit">
+                        <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">2020 — 2023</span>
+                        <h3 class="text-3xl font-bold mt-3">Sporfy Technologies</h3>
+                        <p class="text-gray-500 font-semibold mt-1">BD Manager (PLG Lead)</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div class="experience-card">
+                            <h4 class="text-xl font-bold mb-4 italic">Product Led Growth & Sales</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">The "Sell" part of the trifecta. Bridging the gap between $50+ B2B clients and core engineering.</p>
+                            <ul class="space-y-4 text-sm md:text-base opacity-80">
+                                <li class="flex gap-4"><span>•</span> <span>Closed landmark <strong>INR 3 Crore</strong> single contract, boosting annual revenue targets.</span></li>
+                                <li class="flex gap-4"><span>•</span> <span>Built and scaled a 20-person BD team with a 60% lead-to-close conversion rate.</span></li>
+                                <li class="flex gap-4"><span>•</span> <span>Launched Sports & Fitness Aggregation platform onboarding 2,000+ facilities.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Sporfy SDE -->
+                <div class="grid md:grid-cols-12 gap-12 reveal">
+                    <div class="md:col-span-4 sticky top-32 h-fit">
+                        <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">2019 — 2020</span>
+                        <h3 class="text-3xl font-bold mt-3">Sporfy Technologies</h3>
+                        <p class="text-gray-500 font-semibold mt-1">Software Dev Engineer</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div class="experience-card">
+                            <h4 class="text-xl font-bold mb-4 italic">Full-Stack & IoT Engineering</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">Developing the technical foundation. Automating onboarding logic to save thousands of man-hours.</p>
+                            <ul class="space-y-4 text-sm md:text-base opacity-80">
+                                <li class="flex gap-4"><span>•</span> <span>Reduced client onboarding from 2 days to <strong>60 minutes</strong> using Angular JS & Node JS.</span></li>
+                                <li class="flex gap-4"><span>•</span> <span>Built IoT-based hardware prototypes for attendance tracking and smart logic.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Product Dev Intern -->
+                <div class="grid md:grid-cols-12 gap-12 reveal">
+                    <div class="md:col-span-4 sticky top-32 h-fit">
+                        <span class="text-zinc-500 font-bold text-xs uppercase tracking-widest">2018 — 2019</span>
+                        <h3 class="text-3xl font-bold mt-3">Sporfy Technologies</h3>
+                        <p class="text-gray-500 font-semibold mt-1">Product Dev Intern</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-8">
+                        <div class="experience-card">
+                            <h4 class="text-xl font-bold mb-4 italic">Hardware Foundations</h4>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed opacity-80">Designed IoT-controlled lighting systems via API using Kotlin and Embedded C (Arduino IDE).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Skills & Radar Chart -->
+    <section id="skills" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal text-center mb-24">
+                <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Competency Matrix</h2>
+                <p class="text-gray-500 text-xl font-medium">Quantifying the "Product-Sales-Eng" Trifecta.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="chart-container glass p-8 rounded-[2rem] border border-gray-100 dark:border-zinc-900 shadow-2xl">
+                        <canvas id="skillsRadar"></canvas>
+                    </div>
+                </div>
+
+                <div class="reveal space-y-10">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 mb-6">Modern Stack & AI</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">Prompt Engineering</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">LLM (Gemini/Claude)</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">Node JS</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">Angular JS</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">TypeScript</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">SQL / GIT</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-600 mb-6">Product Discovery</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">JTBD</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">RICE/MOSCOW</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">PRDs & Epics</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">Mixpanel / GA</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">Roadmaps</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-amber-600 mb-6">Hardware & Design</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">SolidWorks</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">Figma</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">IoT / Embedded C</span>
+                            <span class="tag px-4 py-2 bg-gray-50 dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 rounded-xl text-[11px] font-bold">PLC Programming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Strip -->
+    <section id="achievements" class="py-32 px-6 bg-zinc-950 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="reveal p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:border-blue-500 transition-colors">
+                    <span class="text-3xl">🎖️</span>
+                    <h4 class="text-xl font-bold mt-6 mb-2">PSPO II Advanced</h4>
+                    <p class="text-gray-400 text-sm">Professional Scrum Product Owner certification from Scrum Alliance (2025).</p>
+                </div>
+                <div class="reveal p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:border-blue-500 transition-colors" style="transition-delay: 100ms;">
+                    <span class="text-3xl">🏆</span>
+                    <h4 class="text-xl font-bold mt-6 mb-2">Employee Awards</h4>
+                    <p class="text-gray-400 text-sm">Awarded Employee of the Year and Quarter for high-impact scaling and sales.</p>
+                </div>
+                <div class="reveal p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:border-blue-500 transition-colors" style="transition-delay: 200ms;">
+                    <span class="text-3xl">💡</span>
+                    <h4 class="text-xl font-bold mt-6 mb-2">Innovation Winner</h4>
+                    <p class="text-gray-400 text-sm">3rd Place in Development Hackathon for solving complex shop floor logic.</p>
+                </div>
+                <div class="reveal p-8 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:border-blue-500 transition-colors" style="transition-delay: 300ms;">
+                    <span class="text-3xl">🤖</span>
+                    <h4 class="text-xl font-bold mt-6 mb-2">AI for PM Cert</h4>
+                    <p class="text-gray-400 text-sm">Certified by IBM in AI Integration & LLM-assisted product lifecycles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact" class="py-40 px-6 text-center border-t border-gray-100 dark:border-zinc-900">
+        <div class="reveal max-w-4xl mx-auto space-y-12">
+            <h2 class="text-5xl md:text-8xl font-extrabold tracking-tighter">Ready to scale?</h2>
+            
+            <div class="flex flex-col items-center gap-10">
+                <a href="mailto:vaaswin05@gmail.com" class="contact-link text-2xl md:text-5xl font-bold text-blue-600 underline underline-offset-8 decoration-4">
+                    vaaswin05@gmail.com
+                </a>
+                
+                <a href="tel:+919894753245" class="contact-link text-2xl md:text-4xl font-semibold opacity-60">
+                    +91 9894753245
+                </a>
+
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.4em] opacity-40">
+                    <a href="https://www.linkedin.com/in/aswinva/" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
+                    <span>•</span>
+                    <span>Tamil Nadu, India</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-40 opacity-20 text-[9px] font-bold uppercase tracking-[0.8em]">
+            &copy; 2026 VA ASWIN
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. Enhanced Circular Theme Reveal ---
+        const themeBtn = document.getElementById('theme-btn');
+        const rippleContainer = document.getElementById('ripple-container');
+
+        themeBtn.addEventListener('click', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Create ripple circle
+            const circle = document.createElement('div');
+            circle.className = 'ripple-circle';
+            circle.style.left = `${x}px`;
+            circle.style.top = `${y}px`;
+            
+            // Set circle color to the *next* theme background
+            const isToDark = !document.documentElement.classList.contains('dark');
+            circle.style.background = isToDark ? '#000000' : '#ffffff';
+            
+            rippleContainer.appendChild(circle);
+
+            // Start animation
+            circle.classList.add('ripple-animate');
+
+            // Swap theme halfway through ripple
+            setTimeout(() => {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+                updateChartTheme();
+            }, 350);
+
+            // Cleanup
+            setTimeout(() => {
+                circle.remove();
+            }, 1000);
+        });
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // --- 2. Scroll Reveal Observer ---
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // --- 3. Spider Chart Implementation ---
+        let skillsChart;
+        function initChart() {
+            const ctx = document.getElementById('skillsRadar').getContext('2d');
+            const isDark = document.documentElement.classList.contains('dark');
+            const color = isDark ? 'rgba(245, 245, 247, 0.9)' : 'rgba(29, 29, 31, 0.9)';
+            const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)';
+
+            skillsChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Product Strategy (98)',
+                        'Execution (92)',
+                        'B2B Sales (95)',
+                        'IIoT/Hardware (88)',
+                        'AI/Automation (90)',
+                        'Stakeholder Mgmt (96)'
+                    ],
+                    datasets: [{
+                        label: 'Proficiency Score',
+                        data: [98, 92, 95, 88, 90, 96],
+                        backgroundColor: isDark ? 'rgba(10, 132, 255, 0.2)' : 'rgba(0, 102, 204, 0.15)',
+                        borderColor: isDark ? '#0a84ff' : '#0066cc',
+                        borderWidth: 2,
+                        pointRadius: 5,
+                        pointBackgroundColor: isDark ? '#0a84ff' : '#0066cc',
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { color: gridColor },
+                            grid: { color: gridColor },
+                            pointLabels: {
+                                color: color,
+                                font: { size: 11, weight: 'bold', family: 'Inter' }
+                            },
+                            ticks: { display: false, min: 0, max: 110 }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        function updateChartTheme() {
+            if(skillsChart) {
+                skillsChart.destroy();
+                initChart();
+            }
+        }
+
+        window.onload = initChart;
+    </script>
+</body>
+</html>
