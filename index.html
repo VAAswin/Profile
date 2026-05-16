@@ -127,7 +127,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        /* Premium Floating Frosted Glass Card Architecture */
+        /* Premium Floating Frosted Glass Card Architecture --- */
         .glass-card {
             background: rgba(255, 255, 255, 0.35);
             backdrop-filter: blur(24px) saturate(180%);
@@ -147,14 +147,14 @@
             box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
         }
         
-        /* 3D Sticky Cards Stacking Stagger Offsets */
+        /* 3D Sticky Cards Stacking Stagger Offsets --- */
         .sticky-stack-card {
             position: relative;
             will-change: transform, filter;
             transition: transform 0.2s ease-out, filter 0.2s ease-out;
         }
 
-        /* Interactive Tag Modules */
+        /* Interactive Tag Modules --- */
         .interactive-tag {
             background: rgba(255, 255, 255, 0.45);
             border: 1px solid rgba(0, 0, 0, 0.05);
@@ -215,11 +215,14 @@
                 VA ASWIN<span class="text-blue-600 dark:text-blue-500">.</span>
             </div>
             
-            <div class="hidden md:flex items-center space-x-8 text-[11px] uppercase tracking-[0.25em] font-bold opacity-90">
+            <div class="hidden xl:flex items-center space-x-6 text-[10px] uppercase tracking-[0.2em] font-bold opacity-90">
                 <a href="#experience" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Trajectory</a>
+                <a href="#case-study" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Case Study</a>
+                <a href="#how-i-work" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">How I Work</a>
                 <a href="#skills" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Expertise</a>
-                <a href="#education" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
                 <a href="#impact" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Impact</a>
+                <a href="#education" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
+                <a href="#testimonials" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Testimonials</a>
             </div>
 
             <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
@@ -229,19 +232,22 @@
                 <a href="mailto:vaaswin05@gmail.com" class="hidden xs:inline-block px-5 py-2.5 rounded-full bg-apple-dark text-white dark:bg-white dark:text-black text-[13px] font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-md">
                     Hire Me
                 </a>
-                <button id="menu-toggle" aria-label="Open Mobile Drawer Menu" class="md:hidden p-2.5 rounded-full hover:bg-white/50 dark:hover:bg-zinc-800/50 transition-colors active:scale-90">
+                <button id="menu-toggle" aria-label="Open Mobile Drawer Menu" class="xl:hidden p-2.5 rounded-full hover:bg-white/50 dark:hover:bg-zinc-800/50 transition-colors active:scale-90">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 z-[90] glass flex flex-col justify-center items-center opacity-0 pointer-events-none transform translate-y-4 transition-all duration-300 md:hidden">
-        <div class="flex flex-col space-y-8 text-center text-xl font-bold uppercase tracking-widest">
+    <div id="mobile-menu" class="fixed inset-0 z-[90] glass flex flex-col justify-center items-center opacity-0 pointer-events-none transform translate-y-4 transition-all duration-300 xl:hidden">
+        <div class="flex flex-col space-y-6 text-center text-lg font-bold uppercase tracking-widest">
             <a href="#experience" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Trajectory</a>
+            <a href="#case-study" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Case Study</a>
+            <a href="#how-i-work" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">How I Work</a>
             <a href="#skills" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Expertise</a>
-            <a href="#education" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
             <a href="#impact" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Impact</a>
+            <a href="#education" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
+            <a href="#testimonials" onclick="toggleMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Testimonials</a>
             <a href="mailto:vaaswin05@gmail.com" onclick="toggleMenu()" class="px-8 py-3 rounded-full bg-apple-dark text-white dark:bg-white dark:text-black text-[15px] font-bold shadow-md inline-block">
                 Hire Me
             </a>
@@ -259,21 +265,21 @@
                 Sold to <span class="text-blue-600 dark:text-blue-500">Win.</span>
             </h1>
             <p class="text-base sm:text-xl md:text-2xl text-zinc-600 dark:text-gray-400 max-w-3xl mx-auto font-medium leading-relaxed mb-12 px-2">
-                Seven years on the same platform as engineer, then salesperson, then PM. Built IIoT and sports-tech products that scaled to top marketplace tiers and closed INR 3 Cr+ in enterprise metrics.
+                Seven years on the same platform as engineer, then salesperson, then PM. Built IIoT and sports-tech products that scaled to top marketplace tiers and closed INR 3 Cr+ in B2B Deals.
             </p>
             
             <div class="reveal-group flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-20 pt-12 border-t border-gray-300/50 dark:border-zinc-800/40 px-4">
                 <div class="text-center min-w-[120px] transition-all duration-300 hover:scale-105 hover:-translate-y-1">
                     <div class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white transition-colors duration-300 hover:text-blue-600">INR 3 Cr+</div>
-                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-2.5">B2B Deal Execution</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2.5">B2B Deals</div>
                 </div>
                 <div class="text-center min-w-[120px] transition-all duration-300 hover:scale-105 hover:-translate-y-1">
                     <div class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white transition-colors duration-300 hover:text-blue-600">Top 100</div>
-                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-2.5">App Store #85 | Play #95</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2.5">App Store #85 | Play #95</div>
                 </div>
                 <div class="text-center min-w-[120px] transition-all duration-300 hover:scale-105 hover:-translate-y-1">
                     <div class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white transition-colors duration-300 hover:text-blue-600">PSPO II</div>
-                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-2.5">Advanced Product Owner</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2.5">Advanced Product Owner</div>
                 </div>
             </div>
         </div>
@@ -300,15 +306,12 @@
                             <span class="text-xs text-gray-400 block mt-1">Coimbatore, India • Industrial IoT & Digital Transformation</span>
                         </div>
                         <div class="md:col-span-8 border-t md:border-t-0 md:border-l border-gray-300/40 dark:border-zinc-800/50 pt-6 md:pt-0 md:pl-8">
-                            <h4 class="text-lg sm:text-xl font-bold mb-4 italic text-blue-600 dark:text-blue-400">Roadmap Ownership & Strategic Feature Architecture</h4>
-                            <p class="text-zinc-700 dark:text-gray-300 leading-relaxed mb-5 text-sm sm:text-base">
-                                Hired as Business Analyst; scope expanded to full Product Manager responsibilities within 30 days owning roadmap, discovery, PRDs, and stakeholder communication loops across engineering, sales, and customer units.
-                            </p>
-                            <ul class="space-y-3.5 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
-                                <li class="flex gap-3"><span>•</span> <span>Owned Digital Inspection Product roadmaps, managing Forms, Workflows, Connectors, Reports & Dashboards through multi-tiered technical validation.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Executed contextual inquiry sessions across 3 plant sites with 10+ Industrial IoT accounts, identifying 3 key workflow gaps to cut field escalations by 22%.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Configured an AI proposal model (Claude + Gemini) collapsing operational document production timelines from 5 days down to 1 day for 10 live client pipelines.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Defined core tracking OKRs for Task & Notification subsystems, deploying Mixpanel metrics to reach a 90% active onboarded baseline inside Month 1.</span></li>
+                            <ul class="space-y-4 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                                <li class="flex gap-3"><span>•</span> <span>Hired as Business Analyst; expanded to full PM within 30 days — owning roadmap, discovery, PRDs, and stakeholder communication across engineering, sales, and customers.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Owned the Digital Inspection roadmap (Forms, Workflows, Connectors, Reports & Dashboards) — authored PRDs and functional specs with engineering sign-off before each sprint.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Ran contextual inquiry sessions with 10+ IIoT customers (Operators → VPs) across 3 plant sites — surfaced 3 workflow gaps that became Q2 sprint epics, reducing field escalations by 22%.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Built an AI-powered Proposal Bot (Claude + Gemini) that cut proposal drafting from 5 days to 1 day — delivered 10 live client proposals successfully.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Set 30% DAU improvement as North Star; tracked weekly via Mixpanel — achieved 90% active users onboarded within 1 month.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -322,18 +325,15 @@
                                 <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.381-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
                                 Sporfy Lvl 2
                             </h3>
-                            <p class="text-gray-500 dark:text-zinc-400 font-semibold text-sm sm:text-base mt-0.5">Product Manager</p>
+                            <p class="text-gray-500 dark:text-zinc-400 font-semibold text-sm sm:text-base mt-0.5">Product Manager - Level 2</p>
                             <span class="text-xs text-gray-400 block mt-1">Coimbatore, India • Sports-Tech & Entertainment Platform</span>
                         </div>
                         <div class="md:col-span-8 border-t md:border-t-0 md:border-l border-gray-300/40 dark:border-zinc-800/50 pt-6 md:pt-0 md:pl-8">
-                            <h4 class="text-lg sm:text-xl font-bold mb-4 italic text-purple-600 dark:text-purple-400">Multi-Vertical Expansion & International GTM Management</h4>
-                            <p class="text-zinc-700 dark:text-gray-300 leading-relaxed mb-5 text-sm sm:text-base">
-                                Set standard product frameworks for a multi-vertical platform layout containing event ticketing, infrastructure bookings, and aggregate solutions to target UK & UAE international expansions.
-                            </p>
-                            <ul class="space-y-3.5 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
-                                <li class="flex gap-3"><span>•</span> <span>Scaled application platform distributions to hit #2 inside the regional state space, achieving a verified target metric of 50K+ product downloads.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Secured historic top global marketplace tiers, reaching #95 on Google Play and #85 across the Apple App Store.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Supervised a squad of 4 functional Product Managers, delivering 60 core booking feature packages cleanly into live production cycles within a 6-month period.</span></li>
+                            <ul class="space-y-4 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                                <li class="flex gap-3"><span>•</span> <span>Set product vision for a multi-vertical sports-tech platform (ticketing, turf booking, fitness aggregation) — defined B2B2C strategy and GTM for UK & UAE markets.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Scaled Sporfy to #2 in Tamil Nadu with 50K+ downloads, ranking #95 on Google Play and #85 on App Store.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Led 4 Product Managers, delivering 60 core features in 6 months while launching GTM plans for UK and UAE.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Defined and tracked KPIs across 3 product lines — app downloads, B2B activation rate, and event GMV — reviewed weekly with leadership.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -347,18 +347,17 @@
                                 <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                                 Sporfy Lvl 1
                             </h3>
-                            <p class="text-gray-500 dark:text-zinc-400 font-semibold text-sm sm:text-base mt-0.5">Product Manager</p>
+                            <p class="text-gray-500 dark:text-zinc-400 font-semibold text-sm sm:text-base mt-0.5">Product Manager - Level 1</p>
                             <span class="text-xs text-gray-400 block mt-1">Coimbatore, India • Sports-Tech & Entertainment Platform</span>
                         </div>
                         <div class="md:col-span-8 border-t md:border-t-0 md:border-l border-gray-300/40 dark:border-zinc-800/50 pt-6 md:pt-0 md:pl-8">
-                            <h4 class="text-lg sm:text-xl font-bold mb-4 italic text-amber-600 dark:text-amber-400">End-to-End MVP Iterations & Enterprise Revenue Acquisition</h4>
-                            <p class="text-zinc-700 dark:text-gray-300 leading-relaxed mb-5 text-sm sm:text-base">
-                                Guided three core software layers (Coaching/Gyms, Event Management, and Turf Booking) smoothly across internal lifecycles spanning from basic design ideation to high-scale enterprise production environments.
-                            </p>
-                            <ul class="space-y-3.5 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
-                                <li class="flex gap-3"><span>•</span> <span>Captured marquee B2B SaaS accounts, negotiating and locking down an individual flagship contract valued at INR 3 Crore.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Collapsed administrative client onboarding times down from 60 minutes to under 5 minutes through the design of custom management interfaces.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Optimized platform operational expenditures, reducing targeted structural vendor cost baselines by 70% through strategic contract renegotiations.</span></li>
+                            <ul class="space-y-4 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                                <li class="flex gap-3"><span>•</span> <span>Secured high-value B2B SaaS deals including a landmark INR 3 Crore single contract.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Drove 3 SaaS products (Coaching/Gyms, Event Management, Turf Booking) from ideation to production.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Launched the Sports & Fitness Aggregation Platform, onboarding 4,000+ facilities across Tamil Nadu. Recognised as Employee of the Year.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Reduced client onboarding from 60 minutes to under 5 minutes by defining requirements for a custom backend tool.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Reduced operational costs by 70% through strategic vendor contract renegotiation.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Built and scaled a 20-person BD team with 60% conversion rate. Recognised as Employee of the Quarter.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -375,11 +374,10 @@
                             <span class="text-xs text-gray-400 block mt-1">Sporfy • Tech & Full-Stack Application Frameworks</span>
                         </div>
                         <div class="md:col-span-8 border-t md:border-t-0 md:border-l border-gray-300/40 dark:border-zinc-800/50 pt-6 md:pt-0 md:pl-8">
-                            <h4 class="text-lg sm:text-xl font-bold mb-4 italic text-emerald-600 dark:text-emerald-400">Core Logic Engineering & Technical Feasibility Boundaries</h4>
-                            <ul class="space-y-3.5 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
-                                <li class="flex gap-3"><span>•</span> <span>Co-developed AngularJS + NodeJS tools to cut client setup times from 2 days to under 60 mins.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Programmed desktop ElectronJS live-streaming overlays utilizing realtime Socket.io channels.</span></li>
-                                <li class="flex gap-3"><span>•</span> <span>Built physical hardware IoT telemetry tracking prototypes via custom Embedded C logic.</span></li>
+                            <ul class="space-y-4 text-xs sm:text-sm md:text-base text-zinc-700 dark:text-zinc-300">
+                                <li class="flex gap-3"><span>•</span> <span>Co-developed a backend management app (Angular JS + Node JS) cutting client onboarding from 2 days to under 60 minutes.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Built a POC desktop app (Electron JS) for live IP camera streaming with real-time cricket scores via Socket.io — Won 3rd Place at company Hackathon.</span></li>
+                                <li class="flex gap-3"><span>•</span> <span>Built IoT hardware prototypes (attendance trackers, smart lighting) end-to-end — from embedded C firmware to physical deployment.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -396,11 +394,123 @@
                             <span class="text-xs text-gray-400 block mt-1">Sporfy • Hardware Prototyping Foundations</span>
                         </div>
                         <div class="md:col-span-8 border-t md:border-t-0 md:border-l border-gray-300/40 dark:border-zinc-800/50 pt-6 md:pt-0 md:pl-8">
-                            <h4 class="text-lg sm:text-xl font-bold mb-4 italic text-zinc-500">Hardware Prototyping Foundations</h4>
                             <p class="text-zinc-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
-                                Designed, customized, and engineered real-time API-driven connected infrastructure networks running functional Android system endpoints written in Kotlin paired alongside automated Arduino IDE/ESP8266 controller architectures.
+                                Designed and built loT-controlled lighting systems via API using an Android app (Kotlin) and embedded C programming (Arduino IDE / ESP8266).
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-study" class="py-20 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto">
+            <div class="reveal-on-scroll reveal-slide-left mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Case Study</h2>
+                <div class="h-1.5 w-20 bg-blue-600 dark:bg-blue-500 rounded-full mt-4"></div>
+            </div>
+            
+            <div class="glass-card rounded-[2rem] p-6 sm:p-10 border-2 border-apple-blue dark:border-apple-blue/70 relative overflow-hidden">
+                <div class="absolute right-0 top-0 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
+                
+                <span class="text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-widest block mb-2">Featured Project</span>
+                <h3 class="text-2xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">AI Proposal Bot — From 5 Days to 1 Day</h3>
+                <p class="text-gray-500 dark:text-zinc-400 font-medium text-sm sm:text-lg mt-2 mb-8">How I used Claude + Gemini to eliminate a pre-sales bottleneck at Petrus Technologies</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm sm:text-base leading-relaxed">
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs mb-2">The Problem</h4>
+                            <p class="text-zinc-700 dark:text-zinc-300">Every enterprise proposal at Petrus took 4–5 days to draft. Sales engineers were spending most of their time formatting documents instead of selling. We were losing deal momentum because prospects waited too long for proposals after demos.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs mb-2">What I Discovered</h4>
+                            <p class="text-zinc-700 dark:text-zinc-300">Through interviews with the sales team and review of 5 lost deals, I found 3 root causes:</p>
+                            <ol class="list-decimal pl-5 mt-2 space-y-1 text-zinc-600 dark:text-zinc-400">
+                                <li>No reusable content library — every proposal started from scratch</li>
+                                <li>Technical specs had to be manually pulled from 5 different internal docs</li>
+                                <li>No clear owner — proposals bounced between sales, pre-sales, and engineering</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs mb-2">What I Built</h4>
+                            <p class="text-zinc-700 dark:text-zinc-300">I defined the requirements for an AI-powered Proposal Bot using Claude (Anthropic) and Gemini. The bot:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1 text-zinc-600 dark:text-zinc-400">
+                                <li>Ingested our product documentation and past proposals as context</li>
+                                <li>Generated a first draft proposal in under 2 hours from a structured intake form filled by the sales rep</li>
+                                <li>Used prompt engineering to maintain our tone, technical accuracy, and pricing structure</li>
+                                <li>Required only 30 minutes of human review and customization before sending</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs mb-2">Why These Decisions</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-zinc-700 dark:text-zinc-300">
+                                <li>Claude was chosen for long-context document understanding; Gemini for structured data extraction.</li>
+                                <li>Intake form was the key UX insight — it forced sales reps to clarify scope before generation, improving draft quality by 60%.</li>
+                                <li>I kept a human review step intentionally — full automation would have introduced trust risk with enterprise clients.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50/50 dark:bg-zinc-900/50 rounded-2xl p-5 border border-blue-100 dark:border-zinc-800">
+                            <h4 class="font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider text-xs mb-3">The Outcome</h4>
+                            <ul class="space-y-2 font-semibold text-zinc-800 dark:text-zinc-200 text-xs sm:text-sm">
+                                <li class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">→ Proposal drafting time: 5 days → 1 day (80% reduction)</li>
+                                <li>→ 10 live client proposals delivered successfully</li>
+                                <li>→ Pre-sales team capacity freed up by ~4 hours/proposal</li>
+                                <li>→ Zero client complaints about proposal quality</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs mb-2">What I'd Do Differently</h4>
+                            <p class="text-zinc-600 dark:text-zinc-400">Build a feedback loop from the start — tracking which proposal sections clients responded to most, and using that data to improve the prompt templates over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-i-work" class="py-20 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto">
+            <div class="reveal-on-scroll reveal-slide-left mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4">How I Work</h2>
+                <div class="h-1.5 w-20 bg-blue-600 dark:bg-blue-500 rounded-full mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <div class="glass-card rounded-[2rem] p-6 sm:p-8 flex gap-4 items-start transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-zinc-900 dark:text-white mb-2">Discovery First</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">I start every product decision with customer evidence. Contextual inquiry, feedback loops with 50+ clients, and on-site plant floor interviews — not assumptions.</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-[2rem] p-6 sm:p-8 flex gap-4 items-start transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center flex-shrink-0 text-purple-600 dark:text-purple-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-zinc-900 dark:text-white mb-2">Ruthless Prioritisation</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">MoSCoW and RICE are tools, not religion. I prioritise what moves the North Star metric and cuts scope that doesn't. Every sprint has a signed-off PRD before engineering starts.</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-[2rem] p-6 sm:p-8 flex gap-4 items-start transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center flex-shrink-0 text-amber-600 dark:text-amber-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-zinc-900 dark:text-white mb-2">Cross-level Stakeholder Management</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">I manage across 3 levels simultaneously — executive buy-in (Plant Heads, VPs), engineering alignment (sprint sign-off), and sales enablement (pre-sales proposals). No surprises at demo day.</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-[2rem] p-6 sm:p-8 flex gap-4 items-start transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-zinc-900 dark:text-white mb-2">AI-augmented Execution</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">I use LLMs actively in my PM workflow — for proposal generation, user research synthesis, PRD drafting, and competitive analysis. Not as a shortcut, but as a force multiplier.</p>
                     </div>
                 </div>
             </div>
@@ -435,8 +545,8 @@
                     <div>
                         <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-600 dark:text-purple-400 mb-4">Research, Analytics & Strategy</h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Contextual Inquiry</span>
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">User Interviews</span>
+                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Contextual Inquiry</span>
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Market Research & Competitive Analysis</span>
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Mixpanel & Google Analytics</span>
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">OKRs, KPIs & North Star Metrics</span>
@@ -451,17 +561,6 @@
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Node JS & Angular JS</span>
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Jira, Confluence & Asana</span>
                             <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Figma & Adobe XD</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-amber-600 dark:text-amber-500 mb-4">Leadership & Domain Expertise</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Industrial IoT (IIoT)</span>
-                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">B2B & B2B2C SaaS</span>
-                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Cross-functional Stakeholder Management</span>
-                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">B2B Sales Strategy & Partnerships</span>
-                            <span class="interactive-tag px-3 py-1.5 rounded-xl text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Hardware Engineering & APIs</span>
                         </div>
                     </div>
                 </div>
@@ -507,49 +606,60 @@
                     <div class="h-1.5 w-20 bg-blue-600 dark:bg-blue-500 rounded-full mt-4"></div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 mb-16">
                     <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-blue-600 dark:border-l-blue-500 flex flex-col justify-between">
                         <div>
                             <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight">INR 3 Cr+</div>
-                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">Enterprise Deal Acquisition</h4>
+                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">B2B Deals</h4>
                         </div>
                         <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Negotiated and secured a single landmark high-value B2B SaaS platform deployment contract.</p>
                     </div>
 
-                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-purple-600 dark:border-l-purple-500 flex flex-col justify-between" style="transition-delay: 100ms;">
+                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-purple-600 dark:border-l-purple-500 flex flex-col justify-between" style="transition-delay: 50ms;">
                         <div>
                             <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
-                            <div class="text-3xl sm:text-4xl font-extrabold text-purple-600 dark:text-purple-400 tracking-tight">91% Speedup</div>
-                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">Onboarding Optimization</h4>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-purple-600 dark:text-purple-400 tracking-tight">92% Faster</div>
+                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">Onboarding (60 min → 5 min)</h4>
                         </div>
-                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Collapsed client administrative setup metrics from 60 minutes down to under 5 minutes using custom interfaces.</p>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Collapsed client onboarding setup timelines from an initial hour block down to under 5 minutes.</p>
                     </div>
 
-                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-amber-600 dark:border-l-amber-500 flex flex-col justify-between" style="transition-delay: 200ms;">
+                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-amber-600 dark:border-l-amber-500 flex flex-col justify-between" style="transition-delay: 100ms;">
                         <div>
                             <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-2xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                             </div>
-                            <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400 tracking-tight">70% Slidewin</div>
-                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">OpEx Cost Reductions</h4>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400 tracking-tight">70% OpEx</div>
+                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">Reduction</h4>
                         </div>
-                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Drove platform cost efficiency optimization by restructuring and renegotiating structural vendor contracts.</p>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Optimised resource expenditures through strict cross-vendor contract restructuring renegotiation parameters.</p>
                     </div>
 
-                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-emerald-600 dark:border-l-emerald-500 flex flex-col justify-between" style="transition-delay: 300ms;">
+                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-emerald-600 dark:border-l-emerald-500 flex flex-col justify-between" style="transition-delay: 150ms;">
                         <div>
                             <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
                             </div>
-                            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 tracking-tight">4,000+ Nodes</div>
-                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">Ecosystem Expansion</h4>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 tracking-tight">4,000+</div>
+                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">Facilities</h4>
                         </div>
-                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Conceptualized and launched an aggregator network ecosystem, onboarding facility nodes state-wide.</p>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Successfully brought aggregate state-wide nodes into unified digital mapping hubs.</p>
+                    </div>
+
+                    <div class="reveal-on-scroll reveal-scale-up glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-rose-600 dark:border-l-rose-500 flex flex-col justify-between" style="transition-delay: 200ms;">
+                        <div>
+                            <div class="w-12 h-12 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-2xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-rose-600 dark:text-rose-400 tracking-tight">90%</div>
+                            <h4 class="text-base font-bold mt-4 mb-2 text-zinc-900 dark:text-white">DAU Onboarding</h4>
+                        </div>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-2">Achieved 90% active users onboarded within 1 month of product launch at Petrus Technologies.</p>
                     </div>
                 </div>
 
@@ -560,7 +670,7 @@
                         </div>
                         <div>
                             <h5 class="font-bold text-zinc-900 dark:text-white text-sm sm:text-base">PSPO II Advanced Scrum Product Owner</h5>
-                            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Professional certification from Scrum Alliance affirming advanced backlog metrics orchestration frameworks.</p>
+                            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Professional certification from Scrum.org affirming advanced backlog metrics orchestration frameworks.</p>
                         </div>
                     </div>
                     <div class="reveal-on-scroll reveal-fade-up glass-card p-6 rounded-2xl flex items-start gap-4" style="transition-delay: 100ms;">
@@ -570,6 +680,39 @@
                         <div>
                             <h5 class="font-bold text-zinc-900 dark:text-white text-sm sm:text-base">IBM Certified: AI Product Management</h5>
                             <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Specialized accreditation validating LLM automation integration, prompt design parameters, and workspace analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-20 sm:py-32 px-4 sm:px-6 bg-apple-gray dark:bg-[#030303]/40">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal-on-scroll reveal-slide-left mb-16 text-center">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Testimonials</h2>
+                    <div class="h-1.5 w-20 bg-blue-600 dark:bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="reveal-on-scroll reveal-fade-up glass-card p-6 sm:p-10 rounded-[2rem] border-l-4 border-l-blue-600 relative">
+                        <span class="text-6xl text-blue-500/10 absolute left-4 top-4 select-none font-serif">“</span>
+                        <p class="text-zinc-700 dark:text-zinc-300 italic text-sm sm:text-base relative z-10 leading-relaxed">
+                            "He has a knack for identifying critical onboarding gaps; his feedback loops with over 50 B2B clients directly led to a significant reduction in churn. His use of RICE scoring and MOSCOW frameworks kept our sprints lean and high-impact. Any engineering team would be lucky to have a PM who prioritises with such clarity."
+                        </p>
+                        <div class="mt-6 pt-4 border-t border-gray-200/50 dark:border-zinc-800">
+                            <p class="font-bold text-zinc-900 dark:text-white text-sm sm:text-base">— Naveen Kumaar Ramanathan</p>
+                            <p class="text-xs text-gray-400 mt-0.5">Senior Engineer, Product & Platform Engineering</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal-on-scroll reveal-fade-up glass-card p-6 sm:p-10 rounded-[2rem] border-l-4 border-l-purple-600 relative" style="transition-delay: 100ms;">
+                        <span class="text-6xl text-purple-500/10 absolute left-4 top-4 select-none font-serif">“</span>
+                        <p class="text-zinc-700 dark:text-zinc-300 italic text-sm sm:text-base relative z-10 leading-relaxed">
+                            "Aswin provided the deep user insights — gathered from his own field interviews — that allowed us to build truly intuitive interfaces. His leadership was a key reason we catapulted the ticketing platform to the #2 spot in Tamil Nadu and broke into the Top 100 on both the Play Store and App Store."
+                        </p>
+                        <div class="mt-6 pt-4 border-t border-gray-200/50 dark:border-zinc-800">
+                            <p class="font-bold text-zinc-900 dark:text-white text-sm sm:text-base">— Manoj Krishnamoorthy</p>
+                            <p class="text-xs text-gray-400 mt-0.5">Lead UX Designer, B2B SaaS | Industrial IoT</p>
                         </div>
                     </div>
                 </div>
@@ -607,11 +750,11 @@
         window.addEventListener('scroll', () => {
             const navContainer = document.getElementById('nav-container');
             if (window.scrollY > 50) {
-                // Morph to a wide horizontal pill action bar to guarantee safe horizontal link item spacing
+                // Morph to a custom widescreen structural pill boundary to support wide horizontal nav lists flawlessly
                 navContainer.classList.remove('max-w-7xl', 'rounded-2xl', 'py-3.5');
-                navContainer.classList.add('w-[92vw]', 'max-w-4xl', 'rounded-full', 'py-2.5', 'shadow-2xl', 'border-blue-500/15', 'dark:border-blue-500/20');
+                navContainer.classList.add('w-[95vw]', 'max-w-5xl', 'rounded-full', 'py-2.5', 'shadow-2xl', 'border-blue-500/15', 'dark:border-blue-500/20');
             } else {
-                navContainer.classList.remove('w-[92vw]', 'max-w-4xl', 'rounded-full', 'py-2.5', 'shadow-2xl', 'border-blue-500/15', 'dark:border-blue-500/20');
+                navContainer.classList.remove('w-[95vw]', 'max-w-5xl', 'rounded-full', 'py-2.5', 'shadow-2xl', 'border-blue-500/15', 'dark:border-blue-500/20');
                 navContainer.classList.add('max-w-7xl', 'rounded-2xl', 'py-3.5');
             }
         });
@@ -624,12 +767,10 @@
             cards.forEach((card, index) => {
                 const rect = card.getBoundingClientRect();
                 
-                // If a card is sticking or has scrolled up past the viewport stuck threshold bounds
                 if (rect.top <= topBreakpoint + 5) {
                     const stuckDepth = Math.max(0, topBreakpoint - rect.top);
                     const progress = Math.min(1, stuckDepth / rect.height);
                     
-                    // Create continuous scale down, tilt, and dimming opacity overlay properties for lower background stack cards
                     if (index < cards.length - 1) {
                         const targetScale = 1 - (progress * 0.06);
                         const targetTranslateY = -(progress * 15);
@@ -641,7 +782,6 @@
                         card.style.transformOrigin = 'bottom center';
                     }
                 } else {
-                    // Reset to standard flat layout base tracking values
                     card.style.transform = `translateY(0px) scale(1) rotateX(0deg)`;
                     card.style.filter = `brightness(1)`;
                 }
@@ -735,10 +875,10 @@
                         label: 'Strategic Focus Allocation',
                         data: [94, 93, 92, 93, 94, 95],
                         backgroundColor: isDark ? 'rgba(10, 132, 255, 0.15)' : 'rgba(0, 102, 204, 0.06)',
-                        borderColor: isDark ? '#0a84ff' : '#0066cc',
+                        borderColor: 'rgb(0, 102, 204)',
                         borderWidth: 2,
                         pointRadius: 4,
-                        pointBackgroundColor: isDark ? '#0a84ff' : '#0066cc',
+                        pointBackgroundColor: 'rgb(0, 102, 204)',
                         pointBorderColor: '#121214',
                         pointBorderWidth: 1.5,
                         pointHoverRadius: 7
